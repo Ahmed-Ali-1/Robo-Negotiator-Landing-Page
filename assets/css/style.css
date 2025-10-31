@@ -1,0 +1,49 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: Helvitica;
+    src: url(../fonts/Helvitica/Helvetica.ttf);
+}
+
+@font-face {
+    font-family: Monserate;
+    src: url(../fonts/Monserate/static/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: Slence;
+    src: url(../fonts/Slenco/Slenco-Black\ demo.otf);
+}
+
+@font-face {
+    font-family: TitilliumWeb;
+    src: url(../fonts/Tiltillam/TitilliumWeb-Bold.ttf);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/Open/static/OpenSans-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -----Colors:------- */
+
+:root {
+    --heroText-colour: #0E88D2;
+    --about-color: #39A1E1;
+    --bg-color: #010815;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --unnamed-color: #0067A6;
+    --unnamed-color: #042558;
+    --unnamed-color: #25225A;
+    --unnamed-color: #ABABAB;
+}
