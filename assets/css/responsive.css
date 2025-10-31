@@ -9,18 +9,15 @@
         flex-direction: column;
         background-color: #fff;
         overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     nav ul li {
-        padding: 20px;
+        padding: 14px 0;
 
     }
 
     .menu_icon {
         display: block;
-    }
-
-    #menuList {
-        transition: all 0.5s;
     }
 }
