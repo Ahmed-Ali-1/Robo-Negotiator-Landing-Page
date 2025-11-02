@@ -71,19 +71,21 @@ footer {
 .sell_wrapper,
 .need_wrapper,
 .work_wrapper,
-.footer_wrapper {
+.footer_wrapper,
+.technology_wrapper {
     padding: 0 100px;
-
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 56px;
+    padding: 8px 0px;
+    background: white;
 }
 
 nav ul {
+
     display: flex;
     gap: 50px;
     align-items: center;
@@ -92,11 +94,67 @@ nav ul {
 
 }
 
+nav ul li {
+    position: relative;
+}
+
 nav ul li a {
     font-family: OpenSans;
-    font-size: 12px;
     text-decoration: none;
     color: var(--black-color);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+nav ul li::after {
+    content: "▲";
+    position: absolute;
+    bottom: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #000;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+
+nav ul li:hover::after {
+    opacity: 1;
+}
+
+nav ul li.active::after {
+    opacity: 1;
+}
+
+.drop_Down {
+    display: none;
+    transition: all 0.5s;
+}
+
+nav ul li:hover .drop_Down {
+    display: block;
+    position: absolute;
+    left: 0%;
+    top: 100%;
+}
+
+.drop_Down ul {
+    display: block;
+    margin-top: 20px;
+}
+
+.drop_Down ul li {
+    padding-top: 4px;
+    width: 150px;
+}
+
+.drop_Down ul li a {
+    font-family: OpenSans;
+    font-size: 8px;
+    color: var(--white-color);
 }
 
 .menu_icon {
@@ -139,7 +197,7 @@ nav ul li a {
 
 .contentDiv h1 {
     color: var(--white-color);
-    font-size: 26px;
+    font-size: 28px;
     font-family: TitilliumWeb;
     line-height: 40px;
 }
@@ -150,17 +208,39 @@ nav ul li a {
 
 .contentDiv p {
     font-family: Poppins;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 1.7px;
     line-height: 24px;
 }
 
-.contentDiv a {
+.btn {
+    width: fit-content;
+    position: relative;
     color: var(--white-color);
     font-family: Poppins;
     font-size: 10px;
     letter-spacing: 0.5px;
     text-decoration: none;
+    padding: 8px 10px;
+    z-index: 2;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40%;
+    background: #0067A6;
+    height: 100%;
+    border-radius: 50px;
+    z-index: -1;
+    transition: all 0.4s ease;
+    color: #000;
+}
+
+.btn:hover::before {
+    width: 100%;
 }
 
 .car_section {
@@ -252,12 +332,24 @@ nav ul li a {
 
 /* ---------TECHNOLOGY-SECTION-------- */
 
+.imageDiv img {
+    width: 100%;
+    position: relative;
+}
+
+.technology_text {
+    top: 16%;
+    position: absolute;
+}
+
+
 .technology_text ul {
     padding-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     margin-top: 26px;
+    width: 60%;
 
 }
 
@@ -284,20 +376,18 @@ nav ul li a {
     width: 100%;
 }
 
-
-
 /* --------------SELL-SECTION------------ */
 
-
 .sell_section h1 {
+    margin-top: 80px;
     text-align: center;
 }
 
 .sellDiv {
     display: flex;
     justify-content: space-between;
-    gap: 80px;
-    color: #FFFFFF;
+    align-items: center;
+    gap: 40px;
 
 }
 
@@ -310,8 +400,8 @@ nav ul li a {
 
 .sell_head {
     display: flex;
-    gap: 20px;
     align-items: center;
+    gap: 20px;
 }
 
 .sell_head img {
@@ -322,15 +412,16 @@ nav ul li a {
     font-family: TitilliumWeb;
     font-size: 14px;
     letter-spacing: 1px;
+    color: var(--white-color);
 
 }
 
 .sell_content p {
-    width: 74%;
     font-family: Poppins;
     letter-spacing: 0.4px;
     line-height: 24px;
     font-size: 10px;
+    color: var(--white-color);
     padding-left: 50px;
 }
 
@@ -344,11 +435,12 @@ nav ul li a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 100px;
+    gap: 40px;
 }
 
 .need_leftSide {
     position: relative;
+    width: 50%;
 
 }
 
@@ -386,11 +478,10 @@ nav ul li a {
 }
 
 .need_rightSide {
-    width: 50%;
-    padding-left: 50PX;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 34%;
 }
 
 
@@ -400,15 +491,14 @@ nav ul li a {
     font-size: 11px;
     letter-spacing: 0.4px;
     line-height: 26px;
-    width: 64%;
 }
 
 /*--------- WORK-SECTION------- */
 
 .work_text {
-    text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 36px;
 }
 
@@ -417,7 +507,8 @@ nav ul li a {
     color: var(--white-color);
     font-size: 11px;
     letter-spacing: 0.4px;
-    margin: 0 23%;
+    margin: 0 19%;
+    text-align: center;
 }
 
 .work_mainDiv {
@@ -427,14 +518,12 @@ nav ul li a {
     padding: 80px 0;
 }
 
-
-
 .work_leftSide {
-    width: 50%;
+    width: 26%;
 }
 
 .work_rightSide {
-    width: 50%;
+    width: 30%;
 }
 
 .work_leftSide h2,
@@ -445,7 +534,6 @@ nav ul li a {
     color: var(--white-color);
 
 }
-
 
 .work_leftSide ul {
     display: flex;
@@ -460,16 +548,7 @@ nav ul li a {
     font-size: 18px;
 }
 
-.work_leftSide ul li {
-    font-family: TitilliumWeb;
-    font-size: 10px;
-    word-spacing: 1px;
-    color: var(--white-color);
-    line-height: 26px;
-    letter-spacing: 0.4px;
-    width: 50%;
-}
-
+.work_leftSide ul li,
 .work_rightSide ul li {
     font-family: TitilliumWeb;
     font-size: 10px;
@@ -477,7 +556,6 @@ nav ul li a {
     color: var(--white-color);
     line-height: 26px;
     letter-spacing: 0.4px;
-    width: 62%;
 }
 
 .work_rightSide ul {
@@ -488,11 +566,6 @@ nav ul li a {
 
 }
 
-.work_rightSide {
-    padding-left: 80px;
-}
-
-
 /* ------FOOTER-SECTION------ */
 
 .footer_section {
@@ -500,9 +573,7 @@ nav ul li a {
 }
 
 .footerDiv {
-    display: flex;
-    align-items: center;
-    padding: 30px 0;
+    padding: 40px 0 30px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
