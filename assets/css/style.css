@@ -73,8 +73,10 @@ footer {
 .work_wrapper,
 .footer_wrapper,
 .technology_wrapper {
-    padding: 0 100px;
+    padding: 0 90px;
 }
+
+/* ------NAV-SECTION------- */
 
 nav {
     display: flex;
@@ -84,10 +86,15 @@ nav {
     background: white;
 }
 
+nav img {
+    width: 120px;
+    height: 40px;
+}
+
 nav ul {
 
     display: flex;
-    gap: 50px;
+    gap: 44px;
     align-items: center;
     list-style: none;
     transition: all 0.5s;
@@ -181,13 +188,12 @@ nav ul li:hover .drop_Down {
 
 .main_heroDiv {
     display: flex;
-    justify-content: space-between;
     align-items: start;
+    justify-content: space-between;
     padding: 140px 0 40px;
 }
 
 .contentDiv {
-    width: 50%;
     color: var(--white-color);
     display: flex;
     flex-direction: column;
@@ -196,6 +202,7 @@ nav ul li:hover .drop_Down {
 }
 
 .contentDiv h1 {
+    width: 75%;
     color: var(--white-color);
     font-size: 28px;
     font-family: TitilliumWeb;
@@ -207,16 +214,21 @@ nav ul li:hover .drop_Down {
 }
 
 .contentDiv p {
+    width: 56%;
     font-family: Poppins;
     font-size: 11px;
     letter-spacing: 1.7px;
     line-height: 24px;
 }
 
+.btn_color {
+    color: var(--white-color);
+}
+
 .btn {
     width: fit-content;
     position: relative;
-    color: var(--white-color);
+    color: var(--black-color);
     font-family: Poppins;
     font-size: 10px;
     letter-spacing: 0.5px;
@@ -225,30 +237,29 @@ nav ul li:hover .drop_Down {
     z-index: 2;
 }
 
+.btn_color:hover {
+    color: var(--black-color);
+}
+
 .btn::before {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
     width: 40%;
-    background: #0067A6;
+    background: var(--white-color);
     height: 100%;
     border-radius: 50px;
     z-index: -1;
     transition: all 0.4s ease;
-    color: #000;
 }
 
 .btn:hover::before {
     width: 100%;
 }
 
-.car_section {
-    width: 50%;
-}
-
 .car_section img {
-    width: 100%;
+    width: 600px;
     padding-top: 16px;
 }
 
@@ -297,38 +308,6 @@ nav ul li:hover .drop_Down {
     font-size: 10px;
     font-family: TitilliumWeb;
 }
-
-
-
-/* .circle>img {
-    width: 140px;
-
-} */
-
-
-/* .inner {
-    position: relative;
-    top: -110px;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    flex-direction: column;
-} */
-
-/* .inner>img {
-    width: 50px;
-}
-
-.inner p {
-    color: var(--white-color);
-    font-size: 10px;
-    font-family: TitilliumWeb;
-
-}
-
-.inner .big {
-    width: 30px;
-} */
 
 /* ---------TECHNOLOGY-SECTION-------- */
 
@@ -396,6 +375,7 @@ nav ul li:hover .drop_Down {
     gap: 14px;
     flex-direction: column;
     margin-top: 100px;
+    width: 36%;
 }
 
 .sell_head {
@@ -511,6 +491,60 @@ nav ul li:hover .drop_Down {
     text-align: center;
 }
 
+.btn_color {
+    color: var(--white-color);
+}
+
+.btn_search {
+    width: fit-content;
+    position: relative;
+    color: var(--black-color);
+    font-family: Poppins;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    padding: 8px 10px;
+    z-index: 2;
+}
+
+.btn_color:hover {
+    color: var(--black-color);
+}
+
+
+.btn_search::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60%;
+    background: var(--white-color);
+    height: 100%;
+    border-radius: 50px;
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+.btn_color {
+    color: var(--white-color);
+}
+
+.btn_search {
+    width: fit-content;
+    position: relative;
+    color: var(--black-color);
+    font-family: Poppins;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    padding: 8px 10px;
+    z-index: 2;
+}
+
+.btn_search:hover::before {
+    width: 100%;
+}
+
 .work_mainDiv {
     display: flex;
     justify-content: space-between;
@@ -584,8 +618,6 @@ nav ul li:hover .drop_Down {
     width: 200px;
 }
 
-
-
 .footer_about h3,
 .footer_connect h3 {
     font-size: 14px;
@@ -605,7 +637,6 @@ nav ul li:hover .drop_Down {
     flex-direction: column;
     gap: 18px;
 
-
 }
 
 .footer_links a {
@@ -621,8 +652,6 @@ nav ul li:hover .drop_Down {
 .footer_links a:hover {
     color: var(--about-color);
 }
-
-
 
 .footer_connect ul {
     list-style: none;
@@ -644,7 +673,6 @@ nav ul li:hover .drop_Down {
 .footer_connect li:hover {
     color: var(--about-color);
 }
-
 
 .copyRightDiv p {
     color: var(--white-color);

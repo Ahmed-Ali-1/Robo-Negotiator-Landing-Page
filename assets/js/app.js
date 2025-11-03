@@ -1,14 +1,3 @@
-// let menuList = document.getElementById("menuList")
-// menuList.style.maxHeight = "0px"
-
-// function toggleMenu() {
-//     if (menuList.style.maxHeight == "0px") {
-//         menuList.style.maxHeight = "300px"
-//     } else {
-//         menuList.style.maxHeight = "0px"
-//     }
-// }
-
 let menuList = document.getElementById("menuList");
 let menuIcon = document.getElementById("menuIcon");
 let icon = menuIcon.querySelector("i");
@@ -26,3 +15,13 @@ function toggleMenu() {
     icon.classList.add("fa-bars");
   }
 }
+
+
+
+// var btn = document.getElementById("btn")
+
+// btn.addEventListener("click", function () {
+//   var one = document.getElementById("one")
+//   var two = document.getElementById("two")
+//   one.style.backgroundColor = "blue"
+// })
