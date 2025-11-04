@@ -130,6 +130,23 @@
 
 }
 
+@media (max-width: 1026px) {
+
+
+    .contentDiv h1 {
+        /* font-size: 26px; */
+        width: 90%;
+    }
+
+    .contentDiv p {
+        /* font-size: 12px; */
+        width: 90%;
+
+    }
+
+
+}
+
 @media (max-width: 992px) {
     .hero_wrapper {
         padding: 0 40px;
@@ -471,13 +488,15 @@
     .footer_wrapper {
         padding: 0 20px;
     }
-     .footer_links{
+
+    .footer_links {
         display: flex;
         gap: 20px;
     }
 }
+
 @media (max-width: 400px) {
-    .footer_links{
+    .footer_links {
         display: flex;
         flex-direction: column;
     }
